@@ -32,7 +32,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: impa10r/impa10r.github.io
-          ref: test
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -52,7 +51,7 @@ jobs:
           sed -i 's|base = "/";|base = "/boltz/";|g' src/index.tsx
 
       - name: Copy config
-        run: npm run testnet
+        run: npm run mainnet
 
       - name: Build
         run: npm run build
