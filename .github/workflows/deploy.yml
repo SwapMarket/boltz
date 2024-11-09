@@ -28,10 +28,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 'test' branch of Main Repository
+      - name: Checkout 'main' branch of Main Repository
         uses: actions/checkout@v4
         with:
-          repository: SwapMarket/swapmarket.github.io
+          repository: impa10r/impa10r.github.io
           ref: test
 
       - name: Set up Node
@@ -45,11 +45,11 @@ jobs:
 
       - name: Update vite.config.mjs
         run: |
-          sed -i 's|base: "/",*$|base: "/testnet/",|g' vite.config.mjs
+          sed -i 's|base: "/",*$|base: "/boltz/",|g' vite.config.mjs
 
       - name: Update index.tsx
         run: |
-          sed -i 's|base = "/";|base = "/testnet/";|g' src/index.tsx
+          sed -i 's|base = "/";|base = "/boltz/";|g' src/index.tsx
 
       - name: Copy config
         run: npm run testnet
