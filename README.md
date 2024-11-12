@@ -1,1 +1,1 @@
-Testnet deployment of [SwapMarket](https://github.com/SwapMarket/swapmarket.github.io).
+Deployment of the original Boltz codebase for debugging
